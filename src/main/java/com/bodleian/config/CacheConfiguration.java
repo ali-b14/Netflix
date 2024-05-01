@@ -50,6 +50,12 @@ public class CacheConfiguration {
             createCache(cm, com.bodleian.domain.User.class.getName());
             createCache(cm, com.bodleian.domain.Authority.class.getName());
             createCache(cm, com.bodleian.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.bodleian.domain.Video.class.getName());
+            createCache(cm, com.bodleian.domain.VideoMetaData.class.getName());
+            createCache(cm, com.bodleian.domain.Comment.class.getName());
+            createCache(cm, com.bodleian.domain.Like.class.getName());
+            createCache(cm, com.bodleian.domain.Watched.class.getName());
+            createCache(cm, com.bodleian.domain.WatchLater.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

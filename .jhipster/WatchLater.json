@@ -1,0 +1,20 @@
+{
+  "annotations": {
+    "changelogDate": "20240501211047"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "fields": [],
+  "name": "WatchLater",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityName": "video",
+      "relationshipName": "video",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}
