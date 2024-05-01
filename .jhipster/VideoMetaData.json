@@ -1,0 +1,21 @@
+{
+  "annotations": {
+    "changelogDate": "20240501211043"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "type",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "name": "VideoMetaData",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}
