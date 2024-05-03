@@ -69,7 +69,7 @@ public class SecurityConfiguration {
                 authz ->
                     // prettier-ignore
                 authz
-                    .requestMatchers(mvc.pattern("/index.html"), mvc.pattern("/*.html"), mvc.pattern("/_.html"), mvc.pattern("/_.js"), mvc.pattern("/*.js"), mvc.pattern("/*.txt"), mvc.pattern("/*.json"), mvc.pattern("/*.map"), mvc.pattern("/*.css")).permitAll()
+                    .requestMatchers(mvc.pattern("/index.html"), mvc.pattern(HttpMethod.GET, "/3/movie/**"),mvc.pattern("/*.html"), mvc.pattern("/_.html"), mvc.pattern("/_.js"), mvc.pattern("/*.js"), mvc.pattern("/*.txt"), mvc.pattern("/*.json"), mvc.pattern("/*.map"), mvc.pattern("/*.css"), mvc.pattern("/*.jpg")).permitAll()
                     .requestMatchers(mvc.pattern("/*.ico"), mvc.pattern("/*.png"), mvc.pattern("/*.svg"), mvc.pattern("/*.webapp")).permitAll()
                     .requestMatchers(mvc.pattern("/app/**")).permitAll()
                     .requestMatchers(mvc.pattern("/i18n/**")).permitAll()
