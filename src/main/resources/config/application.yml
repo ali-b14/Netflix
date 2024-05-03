@@ -177,14 +177,14 @@ info:
 jhipster:
   clientApp:
     name: 'netflixCopyApp'
-  # By default CORS is disabled. Uncomment to enable.
-  # cors:
-  #   allowed-origins: "http://localhost:8100,http://localhost:9000"
-  #   allowed-methods: "*"
-  #   allowed-headers: "*"
-  #   exposed-headers: "Authorization,Link,X-Total-Count,X-${jhipster.clientApp.name}-alert,X-${jhipster.clientApp.name}-error,X-${jhipster.clientApp.name}-params"
-  #   allow-credentials: true
-  #   max-age: 1800
+  #   By default CORS is disabled. Uncomment to enable.
+  #  cors:
+  #     allowed-origins: "http://localhost:8100,http://localhost:9000"
+  #     allowed-methods: "*"
+  #     allowed-headers: "*"
+  #     exposed-headers: "Authorization,Link,X-Total-Count,X-${jhipster.clientApp.name}-alert,X-${jhipster.clientApp.name}-error,X-${jhipster.clientApp.name}-params"
+  #     allow-credentials: true
+  #     max-age: 1800
   mail:
     from: netflixCopy@localhost
   api-docs:
@@ -200,7 +200,7 @@ jhipster:
     license: unlicensed
     license-url:
   security:
-    content-security-policy: "default-src 'self'; frame-src 'self' data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://storage.googleapis.com; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com data:"
+    content-security-policy: "default-src 'self' https://api.themoviedb.org http://www.w3.org/2000/svg https://image.tmdb.org https://www.youtube.com; frame-src 'self' data: https://www.youtube.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://storage.googleapis.com; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; img-src 'self' data: https://image.tmdb.org; font-src 'self' https://fonts.gstatic.com;"
 # ===================================================================
 # Application specific properties
 # Add your own application properties here, see the ApplicationProperties class

@@ -3,19 +3,33 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <!--    <meta http-equiv="Content-Security-Policy" content="script-src 'self' http://localhost:8080 'self' 'unsafe-inline' 'unsafe-eval' https://storage.googleapis.com 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net; script-src-elem 'self' 'unsafe-inline' https://cdn.jsdelivr.net; connect-src 'self' https://api.themoviedb.org" />-->
     <title>NetflixClone</title>
-    <link rel="stylesheet" href="/bootstrap.min.css" />
+
+    <!--    Page-only CSS view-->
+    <link rel="stylesheet" type="text/css" href="../static/bootstrap.min.css" />
     <link
       rel="stylesheet"
+      type="text/css"
       href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
     />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <!-- Additional CSS files -->
+
+    <script type="text/javascript" src="bootstrap.min.js"></script>
+    <link rel="stylesheet" href="font-awesome.min.css" />
+
+    <!--    Server CSS view-->
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+    />
+    <!--    <link rel="stylesheet" href="font-awesome.min.css" />-->
   </head>
   <body>
     <header class="header">
       <!-- Header Content -->
-      <div class="header-container" style="background-image: url('assets/img/law-bg.jpg'); padding-top: 100px; padding-bottom: 175px">
+      <div class="header-container" style="background-image: url('law-bg.jpg'); padding-top: 100px; padding-bottom: 175px">
         <div class="container">
           <div class="col-md-6 offset-md-3 header-title">
             <h1 class="text-center" style="color: #ffffff">Featured Movies</h1>
@@ -43,7 +57,9 @@
     <script>
       document.addEventListener('DOMContentLoaded', function () {
         const apiKey = '72a82be4ce584fe790c0071997f35a73'; // Your TMDB API key
-        const movieIds = [550, 551, 552, 5153, 500, 501, 502, 503, 504, 505]; // Example movie IDs, replace with actual IDs you want
+        const movieIds = [
+          550, 551, 552, 515, 500, 501, 502, 503, 504, 505, 508, 509, 510, 521, 523, 525, 534, 536, 538, 540, 541, 542, 612, 600, 603, 607,
+        ]; // Example movie IDs, replace with actual IDs you want
 
         document.getElementById('loading').style.display = 'block'; // Show loading indicator
         movieIds.forEach(movieId => {
