@@ -53,11 +53,13 @@
       </section>
     </main>
 
-    <!--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
         const apiKey = '72a82be4ce584fe790c0071997f35a73'; // Your TMDB API key
-        const movieIds = [550, 551, 552, 5153, 500, 501, 502, 503, 504, 505, 508, 509, 510, 521, 523, 525, 534, 536, 538, 540, 541, 542]; // Example movie IDs, replace with actual IDs you want
+        const movieIds = [
+          550, 551, 552, 515, 500, 501, 502, 503, 504, 505, 508, 509, 510, 521, 523, 525, 534, 536, 538, 540, 541, 542, 612, 600, 603, 607,
+        ]; // Example movie IDs, replace with actual IDs you want
 
         document.getElementById('loading').style.display = 'block'; // Show loading indicator
         movieIds.forEach(movieId => {
