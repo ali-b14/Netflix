@@ -1,0 +1,23 @@
+.title-header {
+  padding: 0.75rem 1.25rem;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid transparent;
+}
+
+.title-header h3 {
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.movies {
+  margin-top: 2rem;
+}
+
+.img-card {
+  width: 100%;
+  margin-bottom: 0.4rem;
+}
+
+.movies {
+  margin-bottom: 0.6rem;
+}
