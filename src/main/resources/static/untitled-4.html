@@ -1,0 +1,93 @@
+<!doctype html>
+<html data-bs-theme="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <title>NetflixClone</title>
+    <link rel="stylesheet" href="/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+    />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- Additional CSS files -->
+  </head>
+  <body>
+    <header class="header">
+      <!-- Header Content -->
+      <div class="header-container" style="background-image: url('assets/img/law-bg.jpg'); padding-top: 100px; padding-bottom: 175px">
+        <div class="container">
+          <div class="col-md-6 offset-md-3 header-title">
+            <h1 class="text-center" style="color: #ffffff">Featured Movies</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis mauris accumsan, aliquet dui vel, rutrum dolor. Nunc vitae
+              auctor metus. Quisque posuere nibh ut sem tincidunt, quis feugiat elit lobortis. Sed ut fringilla purus. Suspendisse volutpat
+              ex non sem vehicula venenatis ut sed purus.
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="movies" id="movies">
+        <h2>Latest Movies</h2>
+        <div id="loading" style="text-align: center">Loading movies, please wait...</div>
+        <div class="row" id="movieContainer">
+          <!-- Movies will be dynamically loaded here -->
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const apiKey = '72a82be4ce584fe790c0071997f35a73'; // Your TMDB API key
+        const movieIds = [550, 551, 552, 5153, 500, 501, 502, 503, 504, 505]; // Example movie IDs, replace with actual IDs you want
+
+        document.getElementById('loading').style.display = 'block'; // Show loading indicator
+        movieIds.forEach(movieId => {
+          const url = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&append_to_response=videos`;
+
+          fetch(url)
+            .then(response => {
+              if (!response.ok) {
+                throw new Error('Network response was not ok');
+              }
+              return response.json();
+            })
+            .then(data => {
+              const trailer = data.videos.results.find(v => v.type === 'Trailer');
+              const imageUrl = `https://image.tmdb.org/t/p/w500${data.poster_path}`;
+              const trailerUrl = `https://www.youtube.com/embed/${trailer.key}`;
+
+              const cardHtml = `
+                            <div class="col-lg-3 col-md-4 col-sm-6">
+                                <article class="card">
+                                    <header class="title-header">
+                                        <h3>${data.title}</h3>
+                                    </header>
+                                    <div class="card-block">
+                                        <div class="img-card">
+                                            <img src="${imageUrl}" alt="${data.title}" class="w-100" />
+                                        </div>
+                                        <p class="tagline card-text text-xs-center">${data.overview}</p>
+                                        <a href="${trailerUrl}" class="btn btn-primary btn-block" target="_blank"><i class="fa fa-eye"></i> Watch Now</a>
+                                    </div>
+                                </article>
+                            </div>
+                        `;
+
+              document.getElementById('movieContainer').innerHTML += cardHtml;
+            })
+            .catch(error => {
+              console.error('Failed to fetch movie details', error);
+            })
+            .finally(() => {
+              document.getElementById('loading').style.display = 'none'; // Hide loading indicator
+            });
+        });
+      });
+    </script>
+  </body>
+</html>
