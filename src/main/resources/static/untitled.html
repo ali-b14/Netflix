@@ -21,37 +21,177 @@
     <link rel="stylesheet" href="/Section-Title.css" />
     <link rel="stylesheet" href="/Signup-page-with-overlay.css" />
     <link rel="stylesheet" href="/Team-Horizontal-images.css" />
+
+    <style>
+      .background {
+        overflow: hidden;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        justify-content: center;
+        animation: change forwards 140s infinite ease-in-out;
+      }
+
+      .backg {
+        overflow: hidden;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        justify-content: center;
+        animation: change forwards 150s infinite ease-in-out;
+      }
+
+      form {
+        height: 500px;
+        width: 400px;
+        background-color: rgba(0, 0, 0, 0.551);
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        border-radius: 30px;
+        backface-visibility: visible;
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+        padding: 50px 35px;
+      }
+
+      form h2 {
+        text-align: center;
+      }
+
+      .navbar {
+        overflow: hidden;
+        background-color: #00000076;
+        backface-visibility: visible(5px);
+        text-align: center;
+        margin: 0;
+      }
+
+      .navbar a {
+        float: left;
+        font-size: 20px;
+        display: block;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        padding: 20px;
+        text-decoration: none;
+        border-radius: 40px;
+      }
+
+      .navbar a.right {
+        float: right;
+      }
+
+      .navbar h1.middle {
+        text-align: center;
+      }
+
+      .navbar a:hover {
+        background-color: #ff0000;
+        color: black;
+      }
+
+      @keyframes change {
+        0% {
+          background: url('/content/images/barbieMovie.jpeg');
+          background-size: 100vw 100vh;
+          background-repeat: no-repeat;
+        }
+        10% {
+          background: url('/content/images/GodzillavsKong.avif');
+          background-size: 100vw 100vh;
+          background-repeat: no-repeat;
+        }
+        20% {
+          background: url('/content/images/starwars.jpeg');
+          background-size: 100vw 100vh;
+          background-repeat: no-repeat;
+        }
+        30% {
+          background: url('/content/images/scream.jpeg');
+          background-size: 100vw 100vh;
+          background-repeat: no-repeat;
+        }
+        40% {
+          background: url('/content/images/wonka.jpeg');
+          background-size: 100vw 100vh;
+          background-repeat: no-repeat;
+        }
+        50% {
+          background: url('/content/images/itClown.jpeg');
+          background-size: 100vw 100vh;
+          background-repeat: no-repeat;
+        }
+        60% {
+          background: url('/content/images/mandalorian.jpeg');
+          background-size: 100vw 100vh;
+          background-repeat: no-repeat;
+        }
+        70% {
+          background: url('/content/images/lionKing.jpeg');
+          background-size: 100vw 100vh;
+          background-repeat: no-repeat;
+        }
+        80% {
+          background: url('/content/images/deadPool.jpeg');
+          background-size: 100vw 100vh;
+          background-repeat: no-repeat;
+        }
+        90% {
+          background: url('/content/images/dune.jpeg');
+          background-size: 100vw 100vh;
+          background-repeat: no-repeat;
+        }
+        100% {
+          background: url('/content/images/batman.jpeg');
+          background-size: 100vw 100vh;
+          background-repeat: no-repeat;
+        }
+      }
+    </style>
   </head>
 
-  <style></style>
+  <body class="background">
+    <div class="backg">
+      <div class="navbar">
+        <a href="/homePage.html">Home</a>
+        <h1 class="middle fw-light text-danger text-info fw-bold">NETFLIX</h1>
+      </div>
 
-  <body class="bg-dark">
-    <div class="container-fluid">
-      <div class="row mh-100vh">
-        <div
-          class="col-10 col-sm-8 col-md-6 col-lg-6 offset-1 offset-sm-2 offset-md-3 offset-lg-0 d-lg-flex align-self-center align-items-lg-center align-self-lg-stretch bg-light p-5 rounded rounded-lg-0 my-5 my-lg-0"
-          id="login-block"
-        >
+      <div class="container-fluid">
+        <div class="row mh-100vh">
           <div class="m-auto w-lg-75 w-xl-50">
-            <h2 class="fw-light text-danger text-info mb-5"><i class="fa fa-diamond"></i>&nbsp;NETFLIX</h2>
             <form>
-              <div class="form-group mb-3">
-                <label class="form-label text-danger form-label text-secondary">UserName</label
-                ><input
-                  class="border-danger form-control form-control"
-                  type="text"
-                  inputmode="email"
-                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,15}$"
-                  required=""
-                />
+              <div class="m-auto w-lg-75 w-xl-50">
+                <h2 class="fw-light text-danger text-info mb-5 fw-bold">Sign In</h2>
+                <div class="form-group mb-3">
+                  <label class="form-label text-danger form-label text-secondary">Username</label
+                  ><input
+                    class="border-black form-control"
+                    type="text"
+                    inputmode="email"
+                    placeholder="username"
+                    id="username"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,15}$"
+                    required=""
+                  />
+                </div>
               </div>
               <div class="border-light form-group mb-3">
                 <label class="form-label text-danger border-light form-label text-secondary">Password</label
-                ><input class="border-light form-control form-control" type="password" required="" />
+                ><input class="border-black form-control" type="password" required="" placeholder="password" id="password" />
               </div>
-              <button class="btn btn-danger link-light border rounded mt-2" type="submit">Log In</button>
+              <button class="btn btn-danger link-light border rounded mt-2 align-middle" type="button" onclick="login()">Log In</button>
             </form>
-            <p class="mt-3 mb-0"><a class="text-info small" href="#">Forgot your username or password?</a></p>
+            <p class="mt-3 mb-0"><a class="text-info medium" href="#">Forgot password?</a></p>
           </div>
         </div>
         <div
@@ -76,5 +216,41 @@
     <script src="/bootstrap.min.js"></script>
     <script src="/bs-init.js"></script>
     <script src="/Bootstrap-Image-Uploader-main.js"></script>
+    <script>
+      function login() {
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+
+        console.log('Login button clicked');
+
+        fetch('/api/authenticate', {
+          //where I fetch the login
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            username: username,
+            password: password,
+          }),
+        })
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            return response.json();
+          })
+          .then(data => {
+            console.log(data);
+
+            window.location.href = '/untitled-4.html';
+          })
+          .catch(error => {
+            console.error('There was a problem with the login:', error); //wrong login
+
+            alert('Wrong username or password. Please try again.');
+          });
+      }
+    </script>
   </body>
 </html>

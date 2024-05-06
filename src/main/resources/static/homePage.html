@@ -1,0 +1,231 @@
+<!doctype html>
+<html data-bs-theme="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <title>NetflixClone</title>
+    <link rel="stylesheet" href="/bootstrap.min.css" />
+    <link rel="stylesheet" href="../static/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+    />
+    <link rel="stylesheet" href="/-Login-form-Page-BS4--Login-form-Page-BS4.css" />
+    <link rel="stylesheet" href="/Account-setting-or-edit-profile.css" />
+    <link rel="stylesheet" href="/Bootstrap-Image-Uploader.css" />
+    <link rel="stylesheet" href="/dh-header-cover-image-button.css" />
+    <link rel="stylesheet" href="/Drag-Drop-File-Input-Upload.css" />
+    <link rel="stylesheet" href="/Featured-Movies-styles.css" />
+    <link rel="stylesheet" href="/Featured-Movies.css" />
+    <link rel="stylesheet" href="/Navbar-With-Button-icons.css" />
+    <link rel="stylesheet" href="/Section-Title.css" />
+    <link rel="stylesheet" href="/Signup-page-with-overlay.css" />
+    <link rel="stylesheet" href="/Team-Horizontal-images.css" />
+  </head>
+
+  <style>
+    .background {
+      overflow: hidden;
+      position: absolute;
+      align-items: center;
+      align-content: center;
+      background-position: top;
+      background-repeat: no-repeat;
+      background-size: cover;
+      justify-content: center;
+      animation: change forwards 900s infinite ease-in-out;
+    }
+
+    .backg {
+      overflow: hidden;
+      position: absolute;
+      align-items: center;
+      align-content: center;
+      background-position: top;
+      background-repeat: no-repeat;
+      background-size: cover;
+      justify-content: center;
+      animation: change forwards 100s infinite ease-in-out;
+    }
+
+    .navbar {
+      overflow: hidden;
+      background-image: linear-gradient(to right, black, red, black);
+      backface-visibility: visible(5px);
+      text-align: center;
+      margin: 0;
+      position: relative;
+    }
+
+    .navbar a {
+      float: right;
+      font-size: 30px;
+      padding: 10px 5px;
+      display: block;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 20px;
+    }
+
+    .navbar h1 {
+      float: left;
+      padding: 10px 80px;
+    }
+
+    /* For other buttons */
+    .navbar a.left {
+      float: left;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-color: #000000;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      z-index: 1000;
+    }
+
+    .button-border {
+      font-size: 25px;
+      background-color: #fa0000;
+      border: solid 0.08em #ffffff;
+      color: white;
+      border-radius: 10px;
+    }
+
+    .button-border:hover {
+      font-size: 25px;
+      background-color: #ffffff;
+      border: solid 0.08em #ff0000;
+      color: rgb(255, 0, 0);
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    line {
+      font-size: medium;
+    }
+
+    @keyframes change {
+      0% {
+        width: 100%;
+        height: 100%;
+        background: url('/content/images/barbieMovie.jpeg') top;
+        background-size: 100vw 800px;
+        background-repeat: no-repeat;
+      }
+      10% {
+        width: 100%;
+        height: 100%;
+        background: url('/content/images/GodzillavsKong.avif') top;
+        background-size: 100vw 800px;
+        background-repeat: no-repeat;
+      }
+      20% {
+        width: 100%;
+        height: 100%;
+        background: url('/content/images/starwars.jpeg') top;
+        background-size: 100vw 800px;
+        background-repeat: no-repeat;
+      }
+      30% {
+        width: 100%;
+        height: 100%;
+        background: url('/content/images/scream.jpeg') top;
+        background-size: 100vw 800px;
+        background-repeat: no-repeat;
+      }
+      40% {
+        width: 100%;
+        height: 100%;
+        background: url('/content/images/wonka.jpeg') top;
+        background-size: 100vw 800px;
+        background-repeat: no-repeat;
+      }
+      50% {
+        width: 100%;
+        height: 100%;
+        background: url('/content/images/itClown.jpeg') top;
+        background-size: 100vw 800px;
+        background-repeat: no-repeat;
+      }
+      60% {
+        width: 100%;
+        height: 100%;
+        background: url('/content/images/mandalorian.jpeg') top;
+        background-size: 100vw 800px;
+        background-repeat: no-repeat;
+      }
+      70% {
+        width: 100%;
+        height: 100%;
+        background: url('/content/images/lionKing.jpeg') top;
+        background-size: 100vw 800px;
+        background-repeat: no-repeat;
+      }
+      80% {
+        width: 100%;
+        height: 100%;
+        background: url('/content/images/deadPool.jpeg') top;
+        background-size: 100vw 800px;
+        background-repeat: no-repeat;
+      }
+      90% {
+        width: 100%;
+        height: 100%;
+        background: url('/content/images/dune.jpeg') top;
+        background-size: 100vw 800px;
+        background-repeat: no-repeat;
+      }
+      95% {
+        width: 100%;
+        height: 100%;
+        background: url('/content/images/batman.jpeg') top;
+        background-size: 100vw 800px;
+        background-repeat: no-repeat;
+      }
+      100% {
+        width: 100%;
+        height: 100%;
+        background: url('/content/images/barbieMovie.jpeg') top;
+        background-size: 100vw 800px;
+        background-repeat: no-repeat;
+      }
+    }
+  </style>
+
+  <body>
+    <!-- NavBar -->
+    <div class="navbar">
+      <a href="/untitled-1.html">
+        <button class="button-border" type="button">Register</button>
+      </a>
+      <a href="/untitled.html">
+        <button class="button-border" type="button">Login</button>
+      </a>
+      <h1 class="fw-light text-danger text-info fw-bold">NETFLIX</h1>
+    </div>
+
+    <!-- Main Background -->
+    <div class="background backg"></div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div>
+        <line class="text-danger">About Us? <a href="/untitled-2.html">Click Here!</a></line>
+      </div>
+      <div>
+        <line class="text-danger">Have Questions? <a href="/untitled-3.html">Click Here!</a></line>
+      </div>
+    </div>
+
+    <script src="/bootstrap.min.js"></script>
+    <script src="/bs-init.js"></script>
+    <script src="/Bootstrap-Image-Uploader-main.js"></script>
+  </body>
+</html>
